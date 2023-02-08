@@ -1,27 +1,19 @@
 helm:
   chart: "./"
 targetCustomizations:
-- name: dev
+- name: ring0
   helm:
     values:
       image:
         tag: 2.7.0
   clusterSelector:
     matchLabels:
-      env: dev
-- name: staging
+      group: ring0
+- name: ring1
   helm:
     values:
       image:
-        tag: 2.7.0
+        tag: 3.7.0
   clusterSelector:
     matchLabels:
-      env: staging
-- name: production
-  helm:
-    values:
-      image:
-        tag: 2.7.0
-  clusterSelector:
-    matchLabels:
-      env: production
+      group: ring1
