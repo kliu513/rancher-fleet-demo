@@ -1,5 +1,5 @@
 image:
-  repository: vfarcic/devops-toolkit-series
+  repository: devops-toolkit-series
   tag: latest
   pullPolicy: IfNotPresent
 ingress:
