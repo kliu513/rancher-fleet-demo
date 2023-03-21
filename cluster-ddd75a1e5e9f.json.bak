@@ -1,0 +1,100 @@
+{
+    "apiVersion": "fleet.cattle.io/v1alpha1",
+    "kind": "Cluster",
+    "metadata": {
+        "creationTimestamp": "2023-02-08T19:47:39Z",
+        "generation": 1,
+        "labels": {
+            "fleet.cattle.io/cluster": "cluster-ddd75a1e5e9f",
+            "group": "ring1"
+        },
+        "name": "cluster-ddd75a1e5e9f",
+        "namespace": "clusters",
+        "resourceVersion": "42534",
+        "uid": "3765824d-e55a-46df-96c6-5d5fb134b242"
+    },
+    "spec": {
+        "clientID": "af78a91b-cb52-41af-8cae-94be970f5b46"
+    },
+    "status": {
+        "agent": {
+            "lastSeen": "2023-02-08T21:02:44Z",
+            "namespace": "cattle-fleet-system",
+            "nonReadyNodeNames": null,
+            "nonReadyNodes": 0,
+            "readyNodeNames": [
+                "aks-agentpool-38463940-vmss000002"
+            ],
+            "readyNodes": 1
+        },
+        "conditions": [
+            {
+                "lastUpdateTime": "2023-02-08T20:50:59Z",
+                "message": "NotReady(1) [Bundle devops-toolkit-helm]; deployment.apps default/devops-toolkit-helm-devops-toolkit error] Progress deadline exceeded",
+                "status": "False",
+                "type": "Ready"
+            },
+            {
+                "lastUpdateTime": "2023-02-08T21:02:44Z",
+                "status": "True",
+                "type": "Processed"
+            },
+            {
+                "lastUpdateTime": "2023-02-08T19:47:39Z",
+                "status": "True",
+                "type": "Imported"
+            },
+            {
+                "lastUpdateTime": "2023-02-08T19:47:39Z",
+                "status": "True",
+                "type": "Reconciled"
+            }
+        ],
+        "desiredReadyGitRepos": 1,
+        "display": {
+            "readyBundles": "1/2",
+            "readyNodes": "1/1",
+            "sampleNode": "aks-agentpool-38463940-vmss000002",
+            "state": "NotReady"
+        },
+        "namespace": "cluster-clusters-cluster-ddd75a1e5e9f-511d530cf539",
+        "readyGitRepos": 0,
+        "resourceCounts": {
+            "desiredReady": 3,
+            "missing": 0,
+            "modified": 0,
+            "notReady": 1,
+            "orphaned": 0,
+            "ready": 2,
+            "unknown": 0,
+            "waitApplied": 0
+        },
+        "summary": {
+            "desiredReady": 2,
+            "nonReadyResources": [
+                {
+                    "bundleState": "NotReady",
+                    "name": "devops-toolkit-helm",
+                    "nonReadyStatus": [
+                        {
+                            "apiVersion": "apps/v1",
+                            "kind": "Deployment",
+                            "name": "devops-toolkit-helm-devops-toolkit",
+                            "namespace": "default",
+                            "summary": {
+                                "error": true,
+                                "message": [
+                                    "Progress deadline exceeded"
+                                ],
+                                "state": "failed"
+                            },
+                            "uid": "e58593e0-4b84-4fe9-8feb-c2d1022d5db6"
+                        }
+                    ]
+                }
+            ],
+            "notReady": 1,
+            "ready": 1
+        }
+    }
+}
