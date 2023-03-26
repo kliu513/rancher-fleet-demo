@@ -1,0 +1,73 @@
+[?2004h[?1049h[22;0;0t[1;32r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[30;60H(B[0;7m[ Reading... ](B[m[30;59H(B[0;7m[ Read 77 lines ](B[m[H(B[0;7m  GNU nano 4.8                                      /tmp/kubectl-edit-1675732936.yaml                                                [1;132H(B[m[31d(B[0;7m^G(B[m Get Help     (B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut Text     (B[0;7m^J(B[m Justify[81G(B[0;7m^C(B[m Cur Pos[97G(B[0;7mM-U(B[m Undo[31;113H(B[0;7mM-A(B[m Mark Text[32d(B[0;7m^X(B[m Exit[32;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste Text   (B[0;7m^T(B[m To Spell     (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[32;113H(B[0;7mM-6(B[m Copy Text[30d[2d[39;49m[36m# Please edit the object below. Lines beginning with a '#' will be ignored,[3d# and an empty file will abort the edit. If an error occurs while saving this file will be[4d# reopened with the relevant failures.[5d#[6d[39m(B[mapiVersion: fleet.cattle.io/v1alpha1[7dkind: Cluster[8dmetadata:[9;3HcreationTimestamp: "2023-02-08T19:47:39Z"[10;3Hgeneration: 1[11;3Hlabels:[12;5Hfleet.cattle.io/cluster: cluster-ddd75a1e5e9f[13;5Hgroup: ring0[14;3Hname: cluster-ddd75a1e5e9f[15;3Hnamespace: clusters[16;3HresourceVersion: "42534"[17;3Huid: 3765824d-e55a-46df-96c6-5d5fb134b242[18dspec:[19;3HclientID: af78a91b-cb52-41af-8cae-94be970f5b46[20dstatus:[21;3Hagent:[22;5HlastSeen: "2023-02-08T21:02:44Z"[23;5Hnamespace: cattle-fleet-system[24;5HnonReadyNodeNames: null[25;5HnonReadyNodes: 0[26;5HreadyNodeNames:[27;5H- aks-agentpool-38463940-vmss000002[28;5HreadyNodes: 1[29;3Hconditions:[2d[?12l[?25h[?25l[30d[J[32d[?12l[?25h[32;1H[?1049l[23;0;0t[?1l>[?2004lapiVersion: fleet.cattle.io/v1alpha1
+kind: Cluster
+metadata:
+  creationTimestamp: "2023-02-08T19:47:39Z"
+  generation: 1
+  labels:
+    fleet.cattle.io/cluster: cluster-ddd75a1e5e9f
+    group: ring0
+  name: cluster-ddd75a1e5e9f
+  namespace: clusters
+  resourceVersion: "42534"
+  uid: 3765824d-e55a-46df-96c6-5d5fb134b242
+spec:
+  clientID: af78a91b-cb52-41af-8cae-94be970f5b46
+status:
+  agent:
+    lastSeen: "2023-02-08T21:02:44Z"
+    namespace: cattle-fleet-system
+    nonReadyNodeNames: null
+    nonReadyNodes: 0
+    readyNodeNames:
+    - aks-agentpool-38463940-vmss000002
+    readyNodes: 1
+  conditions:
+  - lastUpdateTime: "2023-02-08T20:50:59Z"
+    message: NotReady(1) [Bundle devops-toolkit-helm]; deployment.apps default/devops-toolkit-helm-devops-toolkit
+      error] Progress deadline exceeded
+    status: "False"
+    type: Ready
+  - lastUpdateTime: "2023-02-08T21:02:44Z"
+    status: "True"
+    type: Processed
+  - lastUpdateTime: "2023-02-08T19:47:39Z"
+    status: "True"
+    type: Imported
+  - lastUpdateTime: "2023-02-08T19:47:39Z"
+    status: "True"
+    type: Reconciled
+  desiredReadyGitRepos: 1
+  display:
+    readyBundles: 1/2
+    readyNodes: 1/1
+    sampleNode: aks-agentpool-38463940-vmss000002
+    state: NotReady
+  namespace: cluster-clusters-cluster-ddd75a1e5e9f-511d530cf539
+  readyGitRepos: 0
+  resourceCounts:
+    desiredReady: 3
+    missing: 0
+    modified: 0
+    notReady: 1
+    orphaned: 0
+    ready: 2
+    unknown: 0
+    waitApplied: 0
+  summary:
+    desiredReady: 2
+    nonReadyResources:
+    - bundleState: NotReady
+      name: devops-toolkit-helm
+      nonReadyStatus:
+      - apiVersion: apps/v1
+        kind: Deployment
+        name: devops-toolkit-helm-devops-toolkit
+        namespace: default
+        summary:
+          error: true
+          message:
+          - Progress deadline exceeded
+          state: failed
+        uid: e58593e0-4b84-4fe9-8feb-c2d1022d5db6
+    notReady: 1
+    ready: 1
