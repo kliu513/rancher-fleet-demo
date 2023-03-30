@@ -14,7 +14,7 @@ targetCustomizations:
   helm:
     values:
       image:
-        tag: 4.0.0
+        tag: 4.0.1
   clusterSelector:
     matchLabels:
       group: ring1
