@@ -10,11 +10,7 @@ spec:
   paths:
   - helm
   targets:
-  - name: ring0
+  - name: devops-toolkit
     clusterSelector:
       matchLabels:
-        group: ring0
-  - name: ring1
-    clusterSelector:
-      matchLabels:
-        group: ring1
+        app: devops-toolkit
