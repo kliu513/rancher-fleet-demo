@@ -10,7 +10,7 @@ spec:
   paths:
   - helm
   targets:
-  - name: devops-toolkit
+  - name: demo
     clusterSelector:
       matchLabels:
-        app: devops-toolkit
+        app: demo
